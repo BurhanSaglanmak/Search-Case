@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable */
+import { BrowserRouter as Router, Routes , Route } from "react-router-dom";
+import HomePage from "./pages/HomePage" 
+import SearchResultsPage from "./pages/SearchResultsPage" 
+import AddNewRecord from "./pages/AddNewRecord";
+import Settings from "./pages/Settings";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes >
+          <Route exact path="/" element={< HomePage /> } />
+          <Route exact path="/search-results" element={<SearchResultsPage/>} />
+          <Route path="/add-new-record" element={<AddNewRecord />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes >
+      </Router>
     </div>
   );
 }
