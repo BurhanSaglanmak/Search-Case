@@ -4,7 +4,7 @@
 
   - Homepage
 
-![Ekran görüntüsü 2023-10-23 154251](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/a0e4cacb-79d2-4dc1-9134-89f82eedf61a)
+![Ekran görüntüsü 2023-10-23 154251](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/e543366b-cc5e-4359-b589-7fdb9ed8385b)
 
   - Search
 
