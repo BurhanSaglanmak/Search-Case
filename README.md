@@ -3,28 +3,28 @@
 # ScreenShots
 
   - Homepage
+![Ekran görüntüsü 2023-10-23 154238](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/c68f351c-8752-4a4d-8059-02e634c64cca)
 
-![Ekran görüntüsü 2023-10-23 154238](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/714998f4-db0c-40ee-be6a-fa5836a9a9c6)
 
   - Search
 
-![Ekran görüntüsü 2023-10-23 154309](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/5563f20b-e1ff-4376-9f82-fff782efef40)
+![Ekran görüntüsü 2023-10-23 154309](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/5c5a1a6c-3444-4e29-b1a2-70628ec02aa4)
 
   - Search List
 
-![Ekran görüntüsü 2023-10-23 154335](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/d36ee4de-ac77-42ed-afa7-d3aea3bbdd0d)
+![Ekran görüntüsü 2023-10-23 154335](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/220f043f-89e7-467c-bd78-f06e5dc5ee95)
 
   - Create page
 
-![Ekran görüntüsü 2023-10-23 154349](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/322659e6-2ccd-4a8a-8c3f-6b77b3682d6a)
+![Ekran görüntüsü 2023-10-23 154349](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/0e9a3e3b-80b5-464e-932d-9a18948308a1)
 
   - Error Validation
 
-![Ekran görüntüsü 2023-10-23 154358](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/c17ef0a7-4e2b-44f8-b526-50f6eb174839)
+![Ekran görüntüsü 2023-10-23 154358](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/f263fe30-1659-4635-a708-676d194a0550)
 
   - Success
 
-![Ekran görüntüsü 2023-10-23 154414](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/3ab6aa6d-b224-4cbb-b632-71e7af9238a2)
+![Ekran görüntüsü 2023-10-23 154414](https://github.com/BurhanSaglanmak/Search-Case/assets/104764065/25491adc-5315-4b1c-9ca3-6a4199af413f)
 
 
 # Getting Started with Create React App
