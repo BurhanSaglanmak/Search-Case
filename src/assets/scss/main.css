@@ -333,6 +333,10 @@ body {
     width: 90%;
   }
 }
+.addNewRecord__container__data__content {
+  z-index: 999;
+  position: relative;
+}
 .addNewRecord__container__data__content input {
   width: 100%;
   height: 46px;

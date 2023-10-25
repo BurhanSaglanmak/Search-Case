@@ -46,6 +46,8 @@
             }
 
             &__content {
+                z-index: 999;
+                position: relative;
                 input {
                     width: 100%;
                     height: 46px;
