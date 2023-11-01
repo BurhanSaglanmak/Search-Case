@@ -1,5 +1,5 @@
+/* eslint-disable */
 import React, { useEffect, useRef, useState } from "react";
-
 import { useSearchContext } from "../../contexts/useSearchContext";
 import ArrowIcon from "../../assets/images/arrow.png";
 
@@ -11,15 +11,10 @@ const Sort = () => {
   /* use effect */
 
   useEffect(() => {
-    const handler = (event) => {
+    (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
         setModal(false);
       }
-    };
-    document.addEventListener("mousedown", handler);
-
-    return () => {
-      document.removeEventListener("mousedown", handler);
     };
   });
 
