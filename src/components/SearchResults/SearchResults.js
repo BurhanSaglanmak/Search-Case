@@ -34,8 +34,6 @@ const SearchResults = () => {
   /* change page */
   const changePage = async ({ selected }) => {
     await setPageNumber(selected);
-    /*     await setLocalStorage(selected);
-     */
   };
 
   return (
@@ -54,7 +52,6 @@ const SearchResults = () => {
           disabledClassName={"pagination__disabled"}
           activeClassName={"pagination__active"}
           pageClassName={"pagination_button"}
-          //  initialPage={getLocalStorage("pageNumber")}
         />
       )}
     </section>

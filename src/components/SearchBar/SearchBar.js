@@ -67,23 +67,13 @@ const SearchBar = () => {
   }, [query]);
 
   useEffect(() => {
-    const handler = (event) => {
+    (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
         setModal(false);
       }
     };
-    document.addEventListener("mousedown", handler);
-
-    return () => {
-      document.removeEventListener("mousedown", handler);
-    };
+   
   },[]);
-
-  useEffect(() => {
-    localStorage.setItem("resultsData", JSON.stringify(data));
-  }, [state.data,data]);
-
-
 
   /* show more & show less button */
 
