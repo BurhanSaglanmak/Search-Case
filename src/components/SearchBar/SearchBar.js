@@ -83,9 +83,7 @@ const SearchBar = () => {
     localStorage.setItem("resultsData", JSON.stringify(data));
   }, [state.data,data]);
 
-  // useEffect(() => {
-  //   setSamplesData(sampleResults.data);
-  // }, [sampleResults.data,setSamplesData]);
+
 
   /* show more & show less button */
 

@@ -26,17 +26,6 @@ const SearchResults = () => {
       );
     });
 
-  /* local storeages */
-  /*   const getLocalStorage = (data) => {
-    const getLocalStorage = JSON.parse(localStorage.getItem(`${data}`));
-    return getLocalStorage;
-  };
-
-  const setLocalStorage = (data) => {
-    const setLocalStorage = localStorage.setItem("pageNumber", `${data}`);
-    return setLocalStorage;
-  };
- */
   /* use effects */
   useEffect(() => {
     setResults(state.data);
