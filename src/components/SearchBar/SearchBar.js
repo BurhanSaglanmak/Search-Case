@@ -1,24 +1,25 @@
 /* eslint-disable */
 import React, { useState, useEffect, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { useNavigate  } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSearchContext } from "../../contexts/useSearchContext";
 import mockData from "../../assets/data/mockData.json";
 import { SampleResultsList } from "../index";
 import { ShowButton } from "../index";
 
 const SearchBar = () => {
-  const [query, setQuery] = useState("");
   const [sampleResults, setSampleResults] = useState({
     data: [],
     itemsToShow: 3,
     expanded: false,
   });
   const [danger, setDanger] = useState(false);
-  const { state, setResults, setSamplesData } = useSearchContext();
+  const { state, setResults, setSamplesData, query, setQuery } = useSearchContext();
   const [modal, setModal] = useState(false);
+  const [dataQuery, setDataQuery]= useState("search");
+
   const modalRef = useRef();
-  const history = useNavigate ();
+  const history = useNavigate();
   /* Data changed to "key: value" */
 
   const data = mockData.data.map((item) => {
@@ -53,10 +54,14 @@ const SearchBar = () => {
     if (sampleResults.data.length > 0) {
       history("/search-results");
       setDanger(false);
+
     } else {
       setDanger(true);
+
     }
-    setQuery("");
+    // console.log(query)
+
+    setQuery(query);
   };
 
   /* use effects */
@@ -72,18 +77,18 @@ const SearchBar = () => {
         setModal(false);
       }
     };
-   
-  },[]);
+
+  }, []);
 
   /* show more & show less button */
 
   const showMoreOrLess = () => {
     sampleResults.itemsToShow === 3
       ? setSampleResults({
-          ...sampleResults,
-          itemsToShow: sampleResults.data.length,
-          expanded: true,
-        })
+        ...sampleResults,
+        itemsToShow: sampleResults.data.length,
+        expanded: true,
+      })
       : setSampleResults({ ...sampleResults, itemsToShow: 3, expanded: false });
   };
 
@@ -105,27 +110,33 @@ const SearchBar = () => {
       data: searchQueryFromObject(data, query),
     });
   };
+useEffect(()=>{
+  if (query) {
+    
+    fetch(`https://api.agify.io/?name=${query}` ).then(res => res.json()).then(data => setDataQuery(data.name))
+  }
+
+},[query])
 
   return (
     <section className="searchbar">
       <div className="searchbar__formCont__formCont">
-      <form className="searchbar__formCont__form" onSubmit={handleSubmit}>
-        <input
-          className={`${
-            danger
-            ? "searchbar__input searchbar__input--hover searchbar__input--danger"
-            : "searchbar__input searchbar__input--hover"
-          }`}
-          type="text"
-          value={query}
-          placeholder="search something"
-          onChange={handleChange}
-          onClick={() => setModal(true)}
-          style={{ textTransform: "capitalize" }}
+        <form className="searchbar__formCont__form" onSubmit={handleSubmit}>
+          <input
+            className={`${danger
+                ? "searchbar__input searchbar__input--hover searchbar__input--danger"
+                : "searchbar__input searchbar__input--hover"
+              }`}
+            type="text"
+            value={query}
+            placeholder="search something"
+            onChange={handleChange}
+            onClick={() => setModal(true)}
+            style={{ textTransform: "capitalize" }}
           />
-        <button className="searchbar__button">Search</button>
-      </form>
-          </div>
+          <button className="searchbar__button">{dataQuery}</button>
+        </form>
+      </div>
       {query.length > 0 && modal && (
         <div ref={modalRef} className="searchbar__samples">
           <SampleResultsList sampleResults={sampleResults} />

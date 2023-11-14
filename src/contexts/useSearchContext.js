@@ -18,6 +18,7 @@ export const SearchProvider = ({ children }) => {
   const [errorCompHide, setErrorHideComp] = useState(false);
   const [responsePost, setResponsePost] = useState();
   const [successHide, setSuccesHide] = useState(false)
+  const [query, setQuery] = useState("");
 
 
   const setResults = (data) => {
@@ -58,7 +59,9 @@ export const SearchProvider = ({ children }) => {
         responsePost,
         setResponsePost,
         successHide,
-        setSuccesHide
+        setSuccesHide,
+        query, 
+        setQuery
       }}
     >
       {children}
